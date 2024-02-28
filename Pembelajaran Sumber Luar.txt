@@ -1,4 +1,6 @@
 Beberapa Sumber Pembelajaran Programming Web Full Stack 
 - YT : Web Programming UNPAS
+* HTML & CSS
+* GitHub
 - YT : Kelas Terbuka
 - YT : Dhea Afrizal
