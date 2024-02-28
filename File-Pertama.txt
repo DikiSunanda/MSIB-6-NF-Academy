@@ -8,3 +8,4 @@ Kumpulan Materi - Materi MSIB 6
 - My SQL Database
 - Rest API
 - Consum API
+- Soft Skill
