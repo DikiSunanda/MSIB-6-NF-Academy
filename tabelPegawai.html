@@ -18,39 +18,23 @@
         var jabatan = "Manager";
         var status = "Menikah";
         var gajiPokok;
-        let tunjanganKeluarga;
+        
       
-        switch (jabatan) {
-          case "Manager":
-            gajiPokok = 15000000;
-            break;
-          case "Asisten Manajeer":
-            gajiPokok = 10000000;
-            break;
-          case "Staff":
-            gajiPokok = 5000000;
-        }
+        
+        // gajiPokok Menggunakan if 
+        if(jabatan = "Manager")gajiPokok = 150000000;
+        else if(jabatan = "Asisten Manager")gajiPokok = 10000000;
+        else if (jabatan = "staff")gajiPokok = 5000000;
+        else (gajiPokok = 0);
       
-        switch (status) {
-          case "Menikah":
-            tunjanganKeluarga = gajiPokok * 0.2;
-            break;
-          case "lajang":
-            tunjanganKeluarga = gajiPokok = 0;
-            break;
-        }
+        // tunjanganKeluarga menggunakan ternary
+        let tunjanganKeluarga = (status == "Menikah") ? gajiPokok * 0.2 : gajiPokok * o;
       
         let tunjanganJabatan = gajiPokok * 0.15;
         let bpjs = gajiPokok * 0.1;
         let totalGaji = gajiPokok + tunjanganKeluarga + tunjanganJabatan + bpjs;
       
-        // alert(
-        //   `Gaji Anda ${gajiPokok} Nama Anda adalah ${pegawai} jabatan anda adalah ${jabatan} status anda adalah ${status}`
-        // );
-        // alert(
-        //   `Anda memiliki tunjangan sebesar ${tunjanganJabatan} Anda memiliki tunjangan BPJS Kesehatan sebesar ${bpjs} dan tunjangan keluarga anda sebesar ${tunjanganKeluarga}`
-        // );
-        // alert(`Total gaji anda sebesar ${totalGaji}`);
+       
       
         document.write(`<table><thead><tr><th>Nama Pegawai</th><th>Jabatan</th><th>Status</th><th>Gaji Pokok</th><th>Tunjangan Jabatan</th><th>Tunjangan BPJS</th><th>Tunjangan Keluarga</th></tr></thead>
                                <tbody><tr><td>${pegawai}</td><td>${jabatan}</td><td>${status}</td><td>Rp. ${gajiPokok}</td><td>Rp. ${tunjanganJabatan}</td><td>Rp. ${bpjs}</td><td>Rp. ${tunjanganKeluarga}</td></tr></tbody>
