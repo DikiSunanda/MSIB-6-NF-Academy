@@ -1,0 +1,34 @@
+*{
+    font-family: sans-serif;
+}
+
+h1{
+   text-align: center;
+   margin-top: 40px;
+   margin-bottom:30px;
+}
+
+table{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr th{
+    border: 1px solid black;  
+    padding: 15px 20px;
+    background-color:burlywood;
+}
+
+tr td {
+    border: 1px solid black;
+    padding: 20px;
+    background-color:cornsilk;
+}
+
+tfoot tr td {
+    font-weight:bold;
+    padding: 15px 20px;
+}
