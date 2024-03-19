@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Pegawai | tugas4JS</title>
+    <link rel="stylesheet" href="./css/tugas4js.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <h1>Form Pencairan Gaji PT Pengangguran Sukses</h1>
+    <h2>Silahkan Masukan Data Diri Anda</h2>
+    <form action="" id="frm">
+        <label for="nama">Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </label>
+        <input type="text" id="nama" name="nama" placeholder="Masukan nama anda" required><br><br>
+        <label for="jabatan">Jabatan &nbsp;&nbsp;:&nbsp; </label>
+        <select name="jabatan" id="jabatan"></select><br><br>
+        <label for="">Status &nbsp;&nbsp; &nbsp;&nbsp;:&nbsp; </label>
+        <input type="text" id="status" name="status" placeholder="Masukan Status anda" required><br><br>
+        <input type="button" id="submit" name="hasil" value="Submit" onclick="cetakData()">
+        <input type="button" id="reset" name="hapus" value="Reset"><br>
+        <i>* isi kolom status dengan ( Menikah/Lajang )</i>
+
+    </form>
+
+
+    <script src="./js/tugas4js.js"></script>
+  </body>
+</html>
