@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas3JS | jQuery</title>
+    <style>
+        body {
+            text-align: center;
+            margin: auto;
+            background-color: #272727;
+            color: dimgray;
+        }
+
+
+        .animal, .animal2, .animal3 {
+            display: inline-block;
+            margin: auto;
+            width: 500px;
+            color: dimgray;
+            border: 3px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .animal{
+            background: url('https://img.freepik.com/free-photo/running-stallion-meadow-capturing-beauty-nature-generated-by-artificial-intelligence_25030-62873.jpg?t=st=1710950279~exp=1710953879~hmac=cfe7323bb4982e348878c2b32af9a8c774ad310893aa86f54829abcaac8ca3b5&w=826');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .animal2{
+            background: url('https://img.freepik.com/premium-photo/werewolf-howl-halloween-background-full-moon-werewolf-howl-halloween-ai-generated_983574-743.jpg?w=740');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .animal3{
+            background: url('https://media.istockphoto.com/id/1335797147/id/foto/harimau-sumatera-menderu.jpg?s=612x612&w=0&k=20&c=8qT6nXabSBCotDs68PmIgIjxihgDYiIwpNJe8dDTh2w=');
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+    </style>
+</head>
+<body>
+    <h2>Sentuh hewan - hewan ini agar bersuara !</h2>
+    <div class="animal" id="">
+        Kuda
+    </div>
+    <div class="animal2" id="">
+        Serigala
+    </div>
+    <div class="animal3" id="">
+        Harimau
+    </div>
+    <audio id="musik" loop>
+        <source src="./sound/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="musik2" loop>
+        <source src="./sound/wolf.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="musik3" loop>
+        <source src="./sound/tiger.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.animal').mouseover(function(){
+                var sound = $('#musik')[0];
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
+            });
+
+            $('.animal').mouseout(function(){
+                $('#musik')[0].pause();
+            });
+        });
+        $(document).ready(function(){
+            $('.animal2').mouseover(function(){
+                var sound = $('#musik2')[0];
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
+            });
+
+            $('.animal2').mouseout(function(){
+                $('#musik2')[0].pause();
+            });
+        });
+        $(document).ready(function(){
+            $('.animal3').mouseover(function(){
+                var sound = $('#musik3')[0];
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
+            });
+
+            $('.animal3').mouseout(function(){
+                $('#musik3')[0].pause();
+            });
+        });
+    </script>
+</body>
+</html>
